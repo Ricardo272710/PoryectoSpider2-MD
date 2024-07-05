@@ -2,7 +2,7 @@ let handler = async (m, { conn, text, usedPrefix }) => {
 
   if (!text) return conn.reply(m.chat, 'Etiqueta a tu nv xd', m)
 
-  let pp = './src/avatar_contact.png'
+  let pp = ''
   let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
   try {
     pp = await conn.getProfilePicture(who)
